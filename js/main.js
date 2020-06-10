@@ -2,6 +2,7 @@ $(document).ready(function(){
    menu();
    nav();
    circle();
+   particles();
 });
 
 function menu() {
@@ -40,4 +41,10 @@ function nav() {
 
 function circle() {
    new CircleType(document.getElementById('circle-text'));
+};
+
+function particles() {
+   particlesJS.load('particles-js', 'js/particles-js/particles/config.json', function() {
+      console.log('callback - particles.js config loaded');
+    });
 };

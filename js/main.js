@@ -3,6 +3,8 @@ $(document).ready(function(){
    nav();
    circle();
    particles();
+   scroll();
+   cases();
 });
 
 function menu() {
@@ -26,25 +28,47 @@ function menu() {
 function nav() {
    $('.acc-menu li .name-link').on('click', f_acc);
       function f_acc(){
-      //скрываем все кроме того, что должны открыть
-         // $('.acc-menu li .acc-body').not($(this).next()).slideUp(300);
-      // открываем или скрываем блок под заголовком, по которому кликнули
-         $(this).next().slideToggle(500);
-      // добавляем класс, чтобы повернуть стрелку
-         if ($(this).hasClass('acc-open')) {
-            $(this).removeClass('acc-open');
-         } else {
-            $(this).addClass('acc-open');
-         }
-      }   
+         if ($(window).width() <= 992) {
+            // $('.acc-menu li .acc-body').not($(this).next()).slideUp(300);
+            $(this).next().slideToggle(500);
+
+            if ($(this).hasClass('acc-open')) {
+               $(this).removeClass('acc-open');
+            } else {
+               $(this).addClass('acc-open');
+            }
+         }  
+      } 
 };
 
-function circle() {
-   new CircleType(document.getElementById('circle-text'));
+function scroll(){
+   if ($(window).width() > 992) {
+      var elem = $.jInvertScroll(['.holder'],{
+         onScroll: function(percent) {
+            console.log(percent);
+         }
+      });
+   }  
+};
+
+function cases() {
+   $('.cases-list').slick({
+      infinite: true,
+      dots: false,
+      arrows: false,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      rows: 2,
+      autoplay: 300
+    });
 };
 
 function particles() {
    particlesJS.load('particles-js', 'js/particles-js/particles/config.json', function() {
       console.log('callback - particles.js config loaded');
     });
+};
+
+function circle() {
+   new CircleType(document.getElementById('circle-text'));
 };

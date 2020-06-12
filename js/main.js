@@ -75,12 +75,12 @@ function cases() {
       slidesToShow: 1,
       slidesToScroll: 1,
       rows: 2,
-      autoplay: 300
+      // autoplay: 300
     });
 };
 
 function yak() {
-   $("#hero-navigation").on("click","li a", function (event) {
+   $("#hero-navigation").on("click","a", function (event) {
       event.preventDefault();
       var id = $(this).attr('href'),
          top = $(id).offset().top;

@@ -1,10 +1,12 @@
 $(document).ready(function(){
    menu();
    nav();
-   circle();
-   particles();
    scroll();
+   particles();
+   animate();
+   circle();
    cases();
+   yak();
 });
 
 function menu() {
@@ -51,6 +53,20 @@ function scroll(){
    }  
 };
 
+function particles() {
+   particlesJS.load('particles-js', 'js/particles-js/particles/config.json', function() {
+      console.log('callback - particles.js config loaded');
+    });
+};
+
+function animate() {
+   new WOW().init();
+};
+
+function circle() {
+   new CircleType(document.getElementById('circle-text'));
+};
+
 function cases() {
    $('.cases-list').slick({
       infinite: true,
@@ -63,12 +79,11 @@ function cases() {
     });
 };
 
-function particles() {
-   particlesJS.load('particles-js', 'js/particles-js/particles/config.json', function() {
-      console.log('callback - particles.js config loaded');
-    });
-};
-
-function circle() {
-   new CircleType(document.getElementById('circle-text'));
-};
+function yak() {
+   $("#hero-navigation").on("click","li a", function (event) {
+      event.preventDefault();
+      var id = $(this).attr('href'),
+         top = $(id).offset().top;
+      $('body,html').animate({scrollTop: top}, 1500);
+   });
+}

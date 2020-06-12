@@ -5,7 +5,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>LionSale</title>
    <link rel="stylesheet" href="css/style.min.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jInvertScroll/0.8.3/css/jInvertScroll.min.css"/>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.css">
 </head>
 <body>
    <div class="wrapper">
@@ -121,6 +121,7 @@
             </header>
             <section class="hero">
                <div class="container">
+                  <div id="particles-js" class="particles"></div>
                   <div class="hero-inner">
                      <h1 class="title">Агентство  полного цикла </h1>
                      <div class="description">
@@ -130,18 +131,18 @@
                         доводим до лидара продаж.
                      </div>
                      <div class="content">
-                        <ul class="hero-nav">
-                           <li><a href="#"><span>&mdash;</span>Аналитика</a></li>
-                           <li><a href="#"><span>&mdash;</span>Маркетинг</a></li>
-                           <li><a href="#"><span>&mdash;</span>Продажи</a></li>
-                           <li><a href="#"><span>&mdash;</span>Ценообразование</a></li>
+                        <ul id="hero-navigation" class="hero-nav">
+                           <li><a href="#yakanalytic"><span>&mdash;</span>Аналитика</a></li>
+                           <li><a href="#yakmarketing"><span>&mdash;</span>Маркетинг</a></li>
+                           <li><a href="#yaksales"><span>&mdash;</span>Продажи</a></li>
+                           <li><a href="#yakpricing"><span>&mdash;</span>Ценообразование</a></li>
                         </ul>
                         <div class="play">
                            <button class="hero-btn" type="button">
                               <img src="img/hero-btn.png" alt="Play">
                               <div id="circle-text" class="hero-btn-text">
-                                 <span>Агентство полного цикла</span>
-                                 <span>Агентство полного цикла</span>
+                                 <span>&ndash; Агентство полного цикла &ndash;&ndash;</span>
+                                 <span>Агентство полного цикла &ndash;</span>
                               </div>
                            </button>
                         </div>
@@ -190,9 +191,10 @@
             </section>
             <section class="section-white cases">
                <div class="container">
+                  <div id="particles-js" class="particles"></div>
                   <div class="section-white-inner">
-                     <h2 class="title">Оплата за результат</h2>
-                     <div class="description">
+                     <h2 class="title wow fadeInLeft" data-wow-duration="1s">Оплата за результат</h2>
+                     <div class="description wow fadeInRight" data-wow-duration="1s">
                         <p>Все просто: вы платите только за выполнение плана продаж. <br>
                            Мы отвечаем на каждом этапе, где могут возникнуть проблемы: 
                            маркетинг, продажи, ценообразование.</p>
@@ -201,10 +203,10 @@
                            в каком-то конкретном сегменте 
                            и вы точно знаете в каком.</p>
                      </div>
-                     <div class="section-link">
+                     <div class="section-link wow fadeInUp" data-wow-duration="1s">
                         <a href="#" class="dark-link">Посмотреть все услуги <span>&mdash;</span></a>
                      </div>
-                     <div class="bg-letter">O</div>
+                     <div class="bg-letter wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.5s">O</div>
                   </div>
                </div>
             </section>
@@ -467,21 +469,21 @@
                   </div>
                </div>
             </section>
-            <section class="section-dark cases" class="parallax-window" data-parallax="scroll" data-image-src="img/bg-cases.jpg" data-naturalHeight="100vh">
+            <section class="section-dark cases">
                <div class="container">
                   <div class="section-dark-inner">
-                     <span class="title">Cases</span>
-                     <div class="section-link">
+                     <span class="title wow fadeIn" data-wow-duration="2s">Cases</span>
+                     <div class="section-link wow fadeInLeft" data-wow-duration="1s">
                         <a href="#" class="light-link">Посмотреть все кейсы <span>&mdash;</span></a>
                      </div>
                   </div>
                </div>
             </section>
-            <section class="section-white analytic">
+            <section id="yakanalytic" class="section-white analytic">
                <div class="container">
                   <div class="section-white-inner">
-                     <h2 class="title">Аналитика</h2>
-                     <div class="description">
+                     <h2 class="title wow fadeInLeft" data-wow-duration="1s">Аналитика</h2>
+                     <div class="description wow fadeInRight" data-wow-duration="1s">
                         <p>Наша компания разработала Золотой стандарт аналитики девелопера, 
                            который позволяет видеть проблемы
                            во всем цикле <br> реклама-продажи-ценообразование: понятно, 
@@ -490,73 +492,73 @@
                            а все конфликты внутри компании переходят в конструктивную плоскость. <br>
                            <span>И эта разработка полностью бесплатна для наших клиентов!</span></p>
                      </div>
-                     <div class="section-link">
+                     <div class="section-link wow fadeInUp" data-wow-duration="1s">
                         <a href="#" class="dark-link">Подробнее об аналитике <span>&mdash;</span></a>
                      </div>
-                     <div class="bg-letter">A</div>
+                     <div class="bg-letter wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.5s">A</div>
                   </div>
                </div>
             </section>
-            <section class="section-dark analytic" class="parallax-window" data-parallax="scroll" data-image-src="img/bg-analytic.jpg" data-naturalHeight="100vh">
+            <section class="section-dark analytic">
                <div class="container">
                   <div class="section-dark-inner">
-                     <span class="title">Analytics</span>
+                     <span class="title wow fadeIn" data-wow-duration="2s">Analytics</span>
                      <div class="quote">
-                        <div class="phrase">
+                        <div class="phrase wow fadeInLeft" data-wow-duration="1s">
                            Если ты тратишь деньги на то, 
                            что тебе не нужно, то скоро рискуешь 
                            начать продавать то, что тебе необходимо.
                         </div>
-                        <div class="name"><span>&mdash;</span>Уоррен Баффет</div>
+                        <div class="name wow fadeInLeft" data-wow-duration="1s"><span>&mdash;</span>Уоррен Баффет</div>
                      </div>
                   </div>
                </div>
             </section>
-            <section class="section-white marketing">
+            <section id="yakmarketing" class="section-white marketing">
                <div class="container">
-                  <div id="particles-js" class="particles-marketing"></div>
+                  <div id="particles-js" class="particles"></div>
                   <div class="section-white-inner">
-                     <h2 class="title">Маркетинг</h2>
-                     <div class="description">
+                     <h2 class="title wow fadeInLeft" data-wow-duration="1s">Маркетинг</h2>
+                     <div class="description wow fadeInRight" data-wow-duration="1s">
                         <p>Несколько собственных технологий под патентной защитой позволяют 
                            нам наращивать объем целевых лидов без потери качества, в среднем,  на 30-150%. </p>
                         <p>Мы уделяем очень много внимания возвратам клиентов в воронку 
                            и прогревам, чтобы отделам продаж было легче продавать.</p>
                      </div>
-                     <div class="bg-letter">M</div>
+                     <div class="bg-letter wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.5s">M</div>
                   </div>
                </div>
             </section>
-            <section class="section-dark marketing" class="parallax-window" data-parallax="scroll" data-image-src="img/bg-marketing.jpg" data-naturalHeight="100vh">
+            <section class="section-dark marketing">
                <div class="container">
                   <div class="section-dark-inner">
-                     <span class="title">Marketing</span>
+                     <span class="title wow fadeIn" data-wow-duration="2s">Marketing</span>
                      <div class="quote">
-                        <div class="phrase">
+                        <div class="phrase wow fadeInLeft" data-wow-duration="1s">
                            Вы не можете просто спросить 
                            клиентов о том что им нужно, ведь 
                            к тому моменту пока вы это сделаете,
                            они будут хотеть что-то новое.
                         </div>
-                        <div class="name"><span>&mdash;</span>Стив Джобс</div>
+                        <div class="name wow fadeInLeft" data-wow-duration="1s"><span>&mdash;</span>Стив Джобс</div>
                      </div>
                   </div>
                </div>
             </section>
-            <section class="section-white sales">
+            <section id="yaksales" class="section-white sales">
                <div class="container">
                   <div class="section-white-inner">
-                     <h2 class="title">Продажи</h2>
-                     <div class="description">
+                     <h2 class="title wow fadeInLeft" data-wow-duration="1s">Продажи</h2>
+                     <div class="description wow fadeInRight" data-wow-duration="1s">
                         <p>Авторская школа, позволяющая как создавать отделы продаж с нуля, 
                            так и улучшать текущие показатели в среднем, на 30-150%, без стрессов, 
                            с внимательным и бережным отношением к персоналу. 
                            Также выстраиваем системы партнерских продаж и агентские сети.
                            </p>
                      </div>
-                     <div class="bg-letter">П</div>
+                     <div class="bg-letter wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.5s">П</div>
                      <div class="bg-shape">
-                        <svg class="triangle animateIn" width="672" height="576" viewBox="0 0 672 576" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="triangle" width="672" height="576" viewBox="0 0 672 576" fill="none" xmlns="http://www.w3.org/2000/svg">
                            <path class="tech__triangle-6" d="M13.9283 568L336 15.8771L658.072 568H13.9283Z" stroke="white" stroke-width="16"></path>
                            <path class="tech__triangle-5" d="M66.5689 537.764L335.998 75.8849L605.427 537.764H66.5689Z" stroke="white" stroke-width="16"></path>
                            <path class="tech__triangle-4" d="M119.21 507.527L335.997 135.893L552.784 507.527H119.21Z" stroke="white" stroke-width="16"></path>
@@ -571,12 +573,12 @@
                   </div>
                </div>
             </section>
-            <section class="section-dark sales" class="parallax-window" data-parallax="scroll" data-image-src="img/bg-sales.jpg" data-naturalHeight="100vh">
+            <section class="section-dark sales">
                <div class="container">
                   <div class="section-dark-inner">
-                     <span class="title">Sales</span>
+                     <span class="title wow fadeIn" data-wow-duration="2s">Sales</span>
                      <div class="quote">
-                        <div class="phrase">
+                        <div class="phrase wow fadeInLeft" data-wow-duration="1s">
                            «Огромное богатство идёт рука 
                            об руку с большой ответственностью, 
                            обязательствами поделиться 
@@ -584,47 +586,48 @@
                            наилучшее распределение этих 
                            средств тем, кто в них нуждается.»
                         </div>
-                        <div class="name"><span>&mdash;</span>Билл Гейтс</div>
+                        <div class="name wow fadeInLeft" data-wow-duration="1s"><span>&mdash;</span>Билл Гейтс</div>
                      </div>
                   </div>
                </div>
             </section>
-            <section class="section-white pricing">
+            <section id="yakpricing" class="section-white pricing">
                <div class="container">
+                  <div id="particles-js" class="particles"></div>
                   <div class="section-white-inner">
-                     <h2 class="title">Ценообразование</h2>
-                     <div class="description">
+                     <h2 class="title wow fadeInLeft" data-wow-duration="1s">Ценообразование</h2>
+                     <div class="description wow fadeInRight" data-wow-duration="1s">
                         <p>Работаем со всем портфелем, продавая квартиры 
                            максимально дорого ( в среднем на 3-7%) и не 
                            допуская неравномерного вымывания.
                            </p>
                      </div>
-                     <div class="bg-letter">Ц</div>
+                     <div class="bg-letter wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.5s">Ц</div>
                   </div>
                </div>
             </section>
-            <section class="section-dark pricing" class="parallax-window" data-parallax="scroll" data-image-src="img/bg-pricing.jpg" data-naturalHeight="100vh">
+            <section class="section-dark pricing">
                <div class="container">
                   <div class="section-dark-inner">
-                     <span class="title">Pricing</span>
+                     <span class="title wow fadeIn" data-wow-duration="2s">Pricing</span>
                      <div class="quote">
-                        <div class="phrase">
+                        <div class="phrase wow fadeInLeft" data-wow-duration="1s">
                            Хорошая реклама образовывает людей, 
                            только и всего. Невозможно одурачить 
                            людей в этом бизнесе. Продукты
                            говорят сами за себя.
                         </div>
-                        <div class="name"><span>&mdash;</span>Стив Джобс</div>
+                        <div class="name wow fadeInLeft" data-wow-duration="1s"><span>&mdash;</span>Стив Джобс</div>
                      </div>
                   </div>
                </div>
             </section>
             <section class="section-white nav-bottom">
                <div class="container">
-                  <div class="title-img"></div>
+                  <div class="title-img wow fadeInLeft" data-wow-duration="1s"></div>
                   <div class="content">
-                     <div class="title-nav">каналов продаж</div>
-                     <div class="description">
+                     <div class="title-nav wow fadeInLeft" data-wow-duration="1s">каналов продаж</div>
+                     <div class="description wow fadeInRight" data-wow-duration="1s">
                         Сайты, все виды рекламы, системы прогрева клиентов, стратегии 
                         и маркетинг, PR и репутация, решение 
                         сложных ситуаций, вывод объекта 
@@ -632,7 +635,7 @@
                         и многое другое. 
                      </div>
                   </div>
-                  <ul class="acc-menu">
+                  <ul class="acc-menu wow fadeInLeft" data-wow-duration="0.7s">
                      <li>
                         <div class="bg-letter">C</div>
                         <div class="name-link">
@@ -726,23 +729,23 @@
                   </ul>
                </div>
             </section>
-            <section class="section-dark channels" class="parallax-window" data-parallax="scroll" data-image-src="img/bg-channels.jpg" data-naturalHeight="100vh">
+            <section class="section-dark channels">
                <div class="container">
                   <div class="section-dark-inner">
-                     <span class="title">Sales channels</span>
+                     <span class="title wow fadeIn" data-wow-duration="2s">Sales channels</span>
                      <div class="quote">
-                        <div class="phrase">
+                        <div class="phrase wow fadeInLeft" data-wow-duration="1s">
                            Ваш Бренд - это обещание, которое
                            вы даете клиентам. Поверят ли вам - 
                            зависит от вашего морального уровня 
                            и умения держать слово.
                         </div>
-                        <div class="name"><span>&mdash;</span>Роберт Кийосаки</div>
+                        <div class="name wow fadeInLeft" data-wow-duration="1s"><span>&mdash;</span>Роберт Кийосаки</div>
                      </div>
                   </div>
                </div>
             </section>
-            <section class="portfolio" class="parallax-window" data-parallax="scroll" data-image-src="img/portfolio.jpg" data-naturalHeight="100vh">
+            <section class="portfolio">
             </section>
             <section class="service">
                <div class="map">
@@ -826,16 +829,10 @@
    <script src="js/libs.min.js"></script>
    <script src="js/main.js"></script>
    
-   <script src="js/parallax.min.js"></script>
-   
+   <!-- <script src="js/wow.min.js"></script> -->
    <script src="js/circletype.min.js"></script>
-   <script src="https://cdn.rawgit.com/orling/grapheme-splitter/b4500feb/index.js"></script>
-   
    <script src="js/particles-js/particles.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-
    <script src="js/jquery.jInvertScroll.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jInvertScroll/0.8.3/js/jquery.jInvertScroll.min.js"></script>
 
 </body>
 </html>

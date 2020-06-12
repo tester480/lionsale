@@ -75,7 +75,7 @@ function cases() {
       slidesToShow: 1,
       slidesToScroll: 1,
       rows: 2,
-      // autoplay: 300
+      autoplay: 300
     });
 };
 

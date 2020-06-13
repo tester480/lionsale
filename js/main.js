@@ -82,8 +82,26 @@ function cases() {
 function yak() {
    $("#hero-navigation").on("click","a", function (event) {
       event.preventDefault();
-      var id = $(this).attr('href'),
-         top = $(id).offset().top;
-      $('body,html').animate({scrollTop: top}, 1500);
+      if ($(window).width() <= 992) {
+         var id = $(this).attr('href'),
+            top = $(id).offset().top;
+         $('.holder, body, html').animate({scrollTop: top}, 1500);
+      }
+      else{
+         var id = $(this).attr('href'),
+            left = $(id).offset().left;
+         $('.holder, body, html').animate({scrollLeft: left}, 1500);
+      }
    });
+
+//    $("#hero-navigation").on("click","a", function (event) { 
+//       elementClick = $(this).attr("href");
+//      destination = $(elementClick).offset().top;
+//      if($.browser.safari){
+//      $('body').animate( { scrollTop: destination }, 1500 );
+//      } else {
+//          $('html').animate( { scrollTop: destination }, 1500 );
+//      }
+//      return false;
+//   });
 }

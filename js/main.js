@@ -119,7 +119,7 @@ function yak() {
       else{
          var id = $(this).attr('href'),
             left = $(id).offset().left;
-         $('.main, body, html').animate({scrollLeft: left}, 1500);
+         $('.main, body, html').animate({scrollTop: left + 190}, 1500);
       }
    });
 }

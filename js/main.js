@@ -45,9 +45,9 @@ function nav() {
 
 function scroll(){
    if ($(window).width() > 992) {
-      var elem = $.jInvertScroll(['.holder'],{
+      var elem = $.jInvertScroll(['.main'],{
          onScroll: function(percent) {
-            console.log(percent);
+            // console.log(percent);
          }
       });
    }  
@@ -60,7 +60,40 @@ function particles() {
 };
 
 function animate() {
-   new WOW().init();
+   if ($(window).width() <= 992) {
+      new WOW().init();
+   }
+   else {
+      $(window).scroll(function(){
+         var divWidth = $(".wrapper").width() - 500;
+         var section = $("section");  
+   
+         section.each(function(){
+            var offset = $(this).offset().left;
+            var ind = $(this).index() + 1;
+            
+            if(offset > divWidth) {
+               $(".title-white, .description, .section-link, .quote", this).addClass("animated fadeOutUp");
+            }
+            
+            if ( (offset < divWidth)){
+               if ($(".title-white, .description, .section-link, .quote", this).hasClass("fadeOutUp")){
+                  $(".title-white, .description, .section-link, .quote", this).removeClass("fadeOutUp");
+                  $(".title-white, .description", this).addClass("animated fadeInDown");
+                  $(".section-link, .quote", this).addClass("animated fadeInUp");
+                  setTimeout(function(){
+                     $(".title-white, .description", this).removeClass("fadeInDown");
+                     $(".section-link, .quote", this).removeClass("fadeInUp");
+                  }, 1500);
+               }
+               else {
+                  $(".title-white, .description", this).addClass("animated fadeInDown");
+                  $(".section-link, .quote", this).addClass("animated fadeInUp");
+               }
+            }
+         });
+      });
+   }
 };
 
 function circle() {
@@ -85,23 +118,13 @@ function yak() {
       if ($(window).width() <= 992) {
          var id = $(this).attr('href'),
             top = $(id).offset().top;
-         $('.holder, body, html').animate({scrollTop: top}, 1500);
+         $('.main, body, html').animate({scrollTop: top}, 1500);
       }
       else{
          var id = $(this).attr('href'),
             left = $(id).offset().left;
-         $('.holder, body, html').animate({scrollLeft: left}, 1500);
+         $('.main, body, html').animate({scrollLeft: left}, 1500);
       }
    });
-
-//    $("#hero-navigation").on("click","a", function (event) { 
-//       elementClick = $(this).attr("href");
-//      destination = $(elementClick).offset().top;
-//      if($.browser.safari){
-//      $('body').animate( { scrollTop: destination }, 1500 );
-//      } else {
-//          $('html').animate( { scrollTop: destination }, 1500 );
-//      }
-//      return false;
-//   });
 }
+

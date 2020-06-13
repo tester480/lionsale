@@ -120,7 +120,7 @@
             </header>
             <section class="hero">
                <div class="container">
-                  <div id="particles-js" class="particles"></div>
+                  <div id="particles-hero" class="particles"></div>
                   <div class="hero-inner">
                      <h1 class="title wow fadeInLeft" data-wow-duration="1s">Агентство  полного цикла </h1>
                      <div class="description wow fadeInLeft" data-wow-duration="1s">
@@ -140,8 +140,9 @@
                            <button class="hero-btn" type="button">
                               <img src="img/hero-btn.png" alt="Play">
                               <div id="circle-text" class="hero-btn-text">
-                                 <span>&ndash; Агентство полного цикла &ndash;&ndash;</span>
-                                 <span>Агентство полного цикла &ndash;</span>
+                                 <span>&ndash;&ndash; Агентство &ndash;&ndash;&ndash; полного &ndash;&ndash;&ndash; цикла &ndash;</span>
+                                 <!-- <span>&ndash; Агентство полного цикла &ndash;&ndash;</span>
+                                 <span>Агентство полного цикла &ndash;</span> -->
                               </div>
                            </button>
                         </div>
@@ -190,7 +191,7 @@
             </section>
             <section class="section-white cases">
                <div class="container">
-                  <div id="particles-js" class="particles"></div>
+                  <div id="particles-cases" class="particles"></div>
                   <div class="section-white-inner">
                      <h2 class="title-white wow fadeInLeft" data-wow-duration="1s">Оплата за результат</h2>
                      <div class="description wow fadeInRight" data-wow-duration="1s">
@@ -515,7 +516,7 @@
             </section>
             <section id="yakmarketing" class="section-white marketing">
                <div class="container">
-                  <div id="particles-js" class="particles"></div>
+                  <div id="particles-marketing" class="particles"></div>
                   <div class="section-white-inner">
                      <h2 class="title-white wow fadeInLeft" data-wow-duration="1s">Маркетинг</h2>
                      <div class="description wow fadeInRight" data-wow-duration="1s">
@@ -555,7 +556,7 @@
                            Также выстраиваем системы партнерских продаж и агентские сети.
                            </p>
                      </div>
-                     <div class="bg-letter wow fadeIn" data-wow-duration="1.5s" data-wow-delay="0.5s">П</div>
+                     <div class="bg-letter wow fadeIn" data-wow-duration="2.5s" data-wow-delay="0.5s">П</div>
                      <div class="bg-shape">
                         <svg class="triangle" width="672" height="576" viewBox="0 0 672 576" fill="none" xmlns="http://www.w3.org/2000/svg">
                            <path class="tech__triangle-6" d="M13.9283 568L336 15.8771L658.072 568H13.9283Z" stroke="white" stroke-width="16"></path>
@@ -592,7 +593,7 @@
             </section>
             <section id="yakpricing" class="section-white pricing">
                <div class="container">
-                  <div id="particles-js" class="particles"></div>
+                  <div id="particles-pricing" class="particles"></div>
                   <div class="section-white-inner">
                      <h2 class="title-white wow fadeInLeft" data-wow-duration="1s">Ценообразование</h2>
                      <div class="description wow fadeInRight" data-wow-duration="1s">
@@ -804,10 +805,10 @@
                                     </svg>
                                  </a></li>
                               </ul>
-                              <form action="#" class="form">
-                                 <input type="text" placeholder="Имя" class="wow fadeInRight" data-wow-duration="1s">
-                                 <input type="text" placeholder="Телефон" class="wow fadeInRight" data-wow-duration="1s">
-                                 <button class="call-btn wow fadeInRight" data-wow-duration="1s" type="submit">Заказать звонок</button>
+                              <form action="#" class="form wow fadeInRight" data-wow-duration="1s">
+                                 <input type="text" placeholder="Имя">
+                                 <input type="text" placeholder="Телефон">
+                                 <button class="call-btn" type="submit">Заказать звонок</button>
                               </form>
                            </div>
                         </div>
@@ -830,6 +831,15 @@
    <script src="js/circletype.min.js"></script>
    <script src="js/particles-js/particles.min.js"></script>
    <script src="js/jquery.jInvertScroll.min.js"></script>
+
+   <script>
+      window.onload=function(){
+         particlesJS.load('particles-hero', 'js/particles-js/particles/hero.json', function() {});
+         particlesJS.load('particles-cases', 'js/particles-js/particles/secwhite.json', function() {});
+         particlesJS.load('particles-marketing', 'js/particles-js/particles/secwhite.json', function() {});
+         particlesJS.load('particles-pricing', 'js/particles-js/particles/secwhite.json', function() {});
+      }
+   </script>
 
 </body>
 </html>

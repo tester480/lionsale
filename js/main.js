@@ -59,6 +59,7 @@ function animate() {
    else{
       $(window).scroll(function(){
          var divWidth = $(".wrapper").width() - 500;
+         var divWidthTriangle = $(".wrapper").width() - 1350;
          var section = $("section");  
    
          section.each(function(){
@@ -66,7 +67,7 @@ function animate() {
             var ind = $(this).index() + 1;
             
             if(offset > divWidth) {
-               $(".title-white, .title-img, .description, .section-link, .quote, .acc-menu, .bg-letter, .bg-shape", this).addClass("animated fadeOutUp");
+               $(".title-white, .title-img, .description, .section-link, .quote, .acc-menu, .bg-letter", this).addClass("animated fadeOutUp");
             }
             
             if ( (offset < divWidth)){
@@ -87,13 +88,52 @@ function animate() {
                   $(".bg-letter, .bg-shape", this).addClass("animated fadeIn");
                }
             }
+
+            if(offset > divWidthTriangle) {
+               $(".bg-shape", this).addClass("animated fadeOutUp");
+            }
+
+            if ( (offset < divWidthTriangle)){
+               if ($(".bg-shape", this).hasClass("fadeOutUp")){
+                  $(".bg-shape", this).removeClass("fadeOutUp");
+                  $(".bg-shape", this).addClass("animated fadeIn");
+                  setTimeout(function(){
+                     $(".bg-shape", this).removeClass("animated fadeIn");
+                  }, 1500);
+               }
+               else {
+                  $(".bg-shape", this).addClass("animated fadeIn");
+               }
+            }
          });
       });
    }
 };
 
 function circle() {
-   new CircleType(document.getElementById('circle-text'));
+   // new CircleType(document.getElementById('circle-text'));
+   function circularText(txt, radius, classIndex) {
+      txt = txt.split(""),
+        classIndex = document.getElementsByClassName("circle-text")[classIndex];
+    
+      var deg = 360 / txt.length,
+        origin = 0;
+    
+      txt.forEach((ea) => {
+        ea = `<p style='height:${radius}px;
+    position:absolute;
+    transform:rotate(${origin}deg);
+    transform-origin:0 100%'>${ea}</p>`;
+        classIndex.innerHTML += ea;
+        origin += deg;
+      });
+    }
+    if ($(window).width() <= 992) {
+      circularText("Агенство полного цикла   Агенство полного цикла   ", 65, 0);
+   }
+   else{
+      circularText("Агенство полного цикла   Агенство полного цикла   ", 80, 0);
+   }
 };
 
 function cases() {
@@ -119,7 +159,7 @@ function yak() {
       else{
          var id = $(this).attr('href'),
             left = $(id).offset().left;
-         $('.main, body, html').animate({scrollTop: left + 190}, 1500);
+         $('.main, body, html').animate({scrollTop: left + 150}, 1500);
       }
    });
 }

@@ -42,7 +42,10 @@ function nav() {
 
 function scroll(){
    if ($(window).width() > 992) {
-      var elem = $.jInvertScroll(['.main']
+      var elem = $.jInvertScroll(['.main'],{
+         onScroll: function(percent) {
+            // console.log(percent);
+         }
       });
    }  
 };
@@ -57,9 +60,9 @@ function circle() {
     
       txt.forEach((ea) => {
         ea = `<p style='height:${radius}px;
-         position:absolute;
-         transform:rotate(${origin}deg);
-         transform-origin:0 100%'>${ea}</p>`;
+    position:absolute;
+    transform:rotate(${origin}deg);
+    transform-origin:0 100%'>${ea}</p>`;
         classIndex.innerHTML += ea;
         origin += deg;
       });

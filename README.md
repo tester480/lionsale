@@ -8,4 +8,4 @@ The desktop version needed to create as a gorizontal site. This solution I reali
 
 For background images in some sections I created parallax effect.
 
-I use [Particles.js](https://vincentgarreau.com/particles.js/) plugin for making beautiful animation on background hero page and other.
+I use [Particles.js](https://vincentgarreau.com/particles.js/) plugin for making beautiful animation background on hero page and other.
